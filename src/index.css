@@ -1,14 +1,14 @@
 :root {
-  /* Palette : neutres chauds + accent terracotta pour les CTA */
+  /* Palette : neutres chauds + accent bordeaux/prune pour les CTA */
   --color-bg: #faf7f2;
   --color-bg-alt: #f1ebe1;
   --color-surface: #ffffff;
   --color-text: #241f1a;
   --color-text-muted: #6f665c;
   --color-border: #e4dccd;
-  --color-accent: #d9542f;
-  --color-accent-dark: #b8431f;
-  --color-accent-soft: #f6ddd2;
+  --color-accent: #7a2e3d;
+  --color-accent-dark: #5c2130;
+  --color-accent-soft: #f0dce0;
   --color-success: #3f7d5a;
   --color-error: #b3261e;
 
