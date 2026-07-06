@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useCart } from "../context/CartContext.jsx";
+import { IconBag } from "./Icons.jsx";
 import "./Header.css";
 
 export default function Header() {
@@ -13,7 +14,7 @@ export default function Header() {
           <NavLink to="/" end>Accueil</NavLink>
           <NavLink to="/boutique">Boutique</NavLink>
           <NavLink to="/panier" className="cart-link" aria-label={`Panier, ${nombreArticles} article(s)`}>
-            🛍 Panier
+            <IconBag aria-hidden="true" /> Panier
             {nombreArticles > 0 && <span className="cart-badge">{nombreArticles}</span>}
           </NavLink>
         </nav>

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext.jsx";
 import Stepper from "../components/Stepper.jsx";
+import { IconCheckCircle } from "../components/Icons.jsx";
 import "./Checkout.css";
 
 export default function CommandeConfirmation() {
@@ -19,7 +20,7 @@ export default function CommandeConfirmation() {
       <div className="container checkout-container">
         <Stepper etapeActuelle={4} />
         <div className="confirmation-box">
-          <div className="confirmation-icon">✅</div>
+          <div className="confirmation-icon"><IconCheckCircle width={48} height={48} strokeWidth={1.5} style={{ color: "var(--color-success)" }} /></div>
           <h1>Merci pour votre commande{infosLivraison ? `, ${infosLivraison.nom.split(" ")[0]}` : ""} !</h1>
           {/* Variation locale en "je" pour créer un effet de conversation, voir DESIGN_NOTES.md */}
           <p style={{ fontSize: "1.05rem" }}>Je prépare votre commande dès maintenant — vous recevrez un courriel de confirmation sous peu.</p>

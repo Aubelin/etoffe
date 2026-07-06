@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { PRODUITS, TRANCHES_PRIX } from "../data/produits.js";
 import FacetFilters from "../components/FacetFilters.jsx";
 import ProductCard from "../components/ProductCard.jsx";
+import { IconX } from "../components/Icons.jsx";
 import "./Catalogue.css";
 import "../components/FacetFilters.css";
 
@@ -90,7 +91,7 @@ export default function Catalogue() {
           <div className="active-filters">
             {filtresActifs.map((f) => (
               <button key={`${f.groupe}-${f.valeur}`} className="active-filter-pill" onClick={() => retirerFiltre(f.groupe, f.valeur)}>
-                {f.label} ✕
+                {f.label} <IconX width={12} height={12} strokeWidth={2.5} />
               </button>
             ))}
             <button className="btn-ghost" onClick={effacerTout}>Effacer tout</button>

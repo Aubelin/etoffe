@@ -99,4 +99,4 @@
   text-align: center;
   padding: 2.5rem 1rem;
 }
-.confirmation-icon { font-size: 3rem; margin-bottom: 1rem; }
+.confirmation-icon { display: flex; justify-content: center; margin-bottom: 1rem; }

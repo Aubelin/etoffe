@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { IconChat, IconStar } from "../components/Icons.jsx";
 import "./Checkout.css";
 
 export default function Sondage() {
@@ -16,7 +17,7 @@ export default function Sondage() {
     return (
       <div className="section">
         <div className="container checkout-container confirmation-box">
-          <div className="confirmation-icon">💬</div>
+          <div className="confirmation-icon"><IconChat width={44} height={44} strokeWidth={1.5} style={{ color: "var(--color-accent)" }} /></div>
           <h1>Merci beaucoup pour votre retour !</h1>
           <p>Vos réponses nous aident à améliorer votre expérience chez Étoffe.</p>
           <Link to="/boutique" className="btn btn-primary">Retour à la boutique</Link>
@@ -45,12 +46,16 @@ export default function Sondage() {
                     border: "1.5px solid var(--color-border)",
                     background: note >= n ? "var(--color-accent-soft)" : "transparent",
                     color: note >= n ? "var(--color-accent-dark)" : "var(--color-text-muted)",
-                    padding: "0.5rem 0.9rem",
+                    padding: "0.5rem 0.7rem",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.3rem",
                   }}
                   aria-pressed={note === n}
+                  aria-label={`${n} étoile${n > 1 ? "s" : ""}`}
                   onClick={() => setNote(n)}
                 >
-                  {n} ★
+                  {n} <IconStar filled={note >= n} width={16} height={16} />
                 </button>
               ))}
             </div>

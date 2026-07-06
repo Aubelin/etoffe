@@ -1,3 +1,4 @@
+import { IconCheck } from "./Icons.jsx";
 import "./Stepper.css";
 
 const ETAPES = [
@@ -19,7 +20,7 @@ export default function Stepper({ etapeActuelle }) {
         return (
           <div key={etape.numero} className={`stepper-step ${etat}`}>
             <div className="stepper-dot" aria-hidden="true">
-              {etat === "done" ? "✓" : etape.numero}
+              {etat === "done" ? <IconCheck width={16} height={16} strokeWidth={2.5} /> : etape.numero}
             </div>
             <div className="stepper-label">{etape.numero}. {etape.label}</div>
             <div className="stepper-status">

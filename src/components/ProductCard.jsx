@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useCart } from "../context/CartContext.jsx";
+import { IconCheck } from "./Icons.jsx";
 import "./ProductCard.css";
 
 export default function ProductCard({ produit }) {
@@ -41,12 +42,12 @@ export default function ProductCard({ produit }) {
           <button
             type="button"
             className="btn btn-primary"
-            style={{ padding: "0.5rem 0.9rem", fontSize: "0.85rem" }}
+            style={{ padding: "0.5rem 0.9rem", fontSize: "0.85rem", display: "inline-flex", alignItems: "center", gap: "0.35rem" }}
             onClick={handleAjouter}
             disabled={!tailleChoisie}
             title={!tailleChoisie ? "Choisissez une taille d'abord" : "Ajouter au panier"}
           >
-            {confirmation ? "Ajouté ✓" : "Ajouter au panier"}
+            {confirmation ? (<><IconCheck width={16} height={16} strokeWidth={2.5} /> Ajouté</>) : "Ajouter au panier"}
           </button>
         </div>
       </div>

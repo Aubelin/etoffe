@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { IconChat } from "./Icons.jsx";
 
 export default function SondageBouton() {
   const location = useLocation();
@@ -12,6 +13,9 @@ export default function SondageBouton() {
         right: "1.25rem",
         bottom: "1.25rem",
         zIndex: 30,
+        display: "inline-flex",
+        alignItems: "center",
+        gap: "0.5rem",
         background: "var(--color-text)",
         color: "var(--color-bg)",
         textDecoration: "none",
@@ -22,7 +26,7 @@ export default function SondageBouton() {
         boxShadow: "var(--shadow)",
       }}
     >
-      💬 Donnez votre avis
+      <IconChat width={18} height={18} aria-hidden="true" /> Donnez votre avis
     </Link>
   );
 }
