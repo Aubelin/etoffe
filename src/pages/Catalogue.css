@@ -1,0 +1,30 @@
+.catalogue-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.sort-select {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.75rem;
+  background: var(--color-surface);
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 860px) {
+  .catalogue-layout {
+    grid-template-columns: 1fr;
+  }
+  .facets {
+    position: static;
+  }
+}
